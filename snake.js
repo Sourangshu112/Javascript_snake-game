@@ -1,4 +1,3 @@
-
 const cvs = document.getElementById("snake");
 const ctx = cvs.getContext("2d");
 
@@ -47,16 +46,11 @@ let food;
 let score = 0;
 let d = "UP";
 let game;
-let name;
 let level = 0;
 let pau;
 let k;
 let a = 0;
 let gameOver = false;
-
-
-//take name input
-name = prompt("Enter your name");
 
 // create the snake
 snake[0] = {
@@ -207,10 +201,7 @@ function draw(){
     ctx.font = "30px Changa one";
     ctx.fillText("level:-"+level,6*box,3.2*box);
 
-    //print name
-    ctx.fillStyle = "yellow";
-    ctx.font = "30px Changa one";
-    ctx.fillText("user:-"+name,13*box,3.2*box);
+
 
 
     // game over
@@ -223,7 +214,7 @@ function draw(){
         ctx.font = "70px Changa one";
         ctx.fillText("Game over",8*box,20*box);
         ctx.font = "50px Changa one";
-        ctx.fillText(name+"'s score is "+score,7*box,23*box);
+        ctx.fillText("Score is "+score,7*box,23*box);
     }
     snake.unshift(newHead);
 

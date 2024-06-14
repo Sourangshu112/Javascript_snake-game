@@ -5,7 +5,8 @@
 	<link rel="icon" type="image/icon" href="snake.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		section {
+		body{
+			overflow: hidden;
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -23,23 +24,15 @@
 			justify-content: center;
 			display: none;
 		}
-		p{
-			margin:10px;
-		}
 		@media (max-width:1080px){
 			div{
 				display:flex;
-			}
-			#controls{
-				background-color: aqua;
-				width:150%;
 			}
 		}
 	</style>
 </head>
 <body>
 	<!-- This is my first game. If you find any mistake please ignore it-->
-	<section>	
 		<canvas id="snake" height="608px" width="608px"></canvas>
 		<div>
 	    	<button id="controlup"><img src="arrow_head_up.png"></button>
@@ -47,18 +40,7 @@
 	    	<button value="left" id="controlleft"><img src="arrow_head_left.png"></button>
 	    	<button value="right" id="controlright"><img src="arrow_head_right.png"></button>
 			<button value="pause" id="pause">PAUSE</button>
-		</div>
-	</section>
-		<div id="controls">
-			<p>
-				Control the direction of the snake to eat food, and the snake will grow longer if eaten food.<br> 
-				Avoid hitting the wall of and the snake, else the game will over. <br>
-				Use arrow keys(pc) or arrow buttons(mobile) to make the snake move to corresponding direction.<br>
-				Use the space bar(pc) or Pause button(mobile) to pause the Game. <br>
-				Thank You.
-			</p>
-		</div>
-		
+		</div>		
 </body>
 <script src="snake.js"></script>
 </html>
